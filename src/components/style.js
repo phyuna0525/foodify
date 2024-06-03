@@ -59,3 +59,7 @@ export const Wheel = styled.div`
   width: 500px;
   height: 500px;
 `;
+
+export const ReciptListContent = styled.div`
+  display: flex;
+`;
