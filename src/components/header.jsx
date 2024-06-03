@@ -12,7 +12,7 @@ const Header = () => {
         <Tab
           content={"음식 룰렛"}
           onClick={() => {
-            navigate("roluet");
+            navigate("wheel");
           }}
         />
         <Tab

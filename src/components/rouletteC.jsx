@@ -90,7 +90,7 @@ const Wheel = () => {
   return (
     <div>
       <S.Wheel>
-        <S.Canvas ref={canvasRef} width="500" height="500" />{" "}
+        <S.Canvas ref={canvasRef} width="500" height="500" />
         <S.Button onClick={rotate}>START</S.Button>
       </S.Wheel>
 
