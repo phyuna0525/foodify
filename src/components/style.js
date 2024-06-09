@@ -226,3 +226,75 @@ export const ReciptList = styled.div`
   width: 60%;
   border-bottom: 1px solid #f1f1f2;
 `;
+
+export const LoginWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  padding: 0;
+`;
+
+export const LoginText = styled.p`
+  font-size: 42px;
+  user-select: none;
+`;
+
+export const PiCKText = styled.span`
+  color: #9650fa;
+`;
+
+export const ContentWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 40px;
+`;
+
+export const inputContent = styled.input`
+  display: flex;
+  border: none;
+  width: 100%;
+  ::placeholder {
+    font-size: 20px;
+    color: #afadb1;
+  }
+  background-color: #f1f1f2;
+  font-size: 20px;
+  &:hover {
+    outline: none;
+  }
+  outline: none;
+  caret-color: #9650fa;
+`;
+export const InputWraps = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+export const inputLabel = styled.p`
+  font-size: 20px;
+`;
+
+export const InputContainer = styled.div`
+  padding: 12px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 48px;
+  background-color: #f1f1f2;
+  border-radius: 12px;
+  &:hover {
+    border: 1px solid #9650fa;
+    outline: none;
+  }
+  box-sizing: border-box;
+`;
+
+export const Icon = styled.div`
+  width: 24px;
+  height: 24px;
+`;

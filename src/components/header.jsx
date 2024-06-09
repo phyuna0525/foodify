@@ -5,6 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
+
+  const name = localStorage.getItem("name");
+
   return (
     <S.HeaderContainer>
       <S.HeaderLeft>
