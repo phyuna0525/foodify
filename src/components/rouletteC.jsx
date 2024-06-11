@@ -2,6 +2,52 @@ import React, { useState, useRef, useEffect } from "react";
 import * as S from "./style";
 import Location from "../assets/svg/location.svg";
 
+const KOREAN = [
+  "김치찌개",
+  "된장찌개",
+  "불고기",
+  "칼국수",
+  "떡볶이",
+  "잡채",
+  "삼겹살",
+  "갈비",
+];
+
+const CHINA = [
+  "짜장면",
+  "짬뽕",
+  "깐풍기",
+  "마라탕",
+  "딤섬",
+  "마라샹궈",
+  "마파두부",
+  "고추잡채",
+  "크림새우",
+];
+
+const WESTERN = [
+  "피자",
+  "샐러드",
+  "파스타",
+  "스테이크",
+  "샌드위치",
+  "햄버거",
+  "핫도그",
+  "리조또",
+];
+
+const JAPEN = [
+  "스시",
+  "우동",
+  "회",
+  "오뎅",
+  "라면",
+  "소바",
+  "샤브샤브",
+  "타코야키",
+  "가라아게",
+];
+
 const Wheel = () => {
   const canvasRef = useRef(null);
   const [menuInput, setMenuInput] = useState("");
@@ -15,48 +61,6 @@ const Wheel = () => {
     "족발",
     "피자",
     "삼겹살",
-  ]);
-  const [korean] = useState([
-    "김치찌개",
-    "된장찌개",
-    "불고기",
-    "칼국수",
-    "떡볶이",
-    "잡채",
-    "삼겹살",
-    "갈비",
-  ]);
-  const [china] = useState([
-    "짜장면",
-    "짬뽕",
-    "깐풍기",
-    "마라탕",
-    "딤섬",
-    "마라샹궈",
-    "마파두부",
-    "고추잡채",
-    "크림새우",
-  ]);
-  const [western] = useState([
-    "피자",
-    "샐러드",
-    "파스타",
-    "스테이크",
-    "샌드위치",
-    "햄버거",
-    "핫도그",
-    "리조또",
-  ]);
-  const [japen] = useState([
-    "스시",
-    "우동",
-    "회",
-    "오뎅",
-    "라면",
-    "소바",
-    "샤브샤브",
-    "타코야키",
-    "가라아게",
   ]);
 
   const [buttonsState, setButtonsState] = useState({
@@ -202,41 +206,41 @@ const Wheel = () => {
           <p> 먹고싶은 음식 종류를 선택하세요</p>
           <S.ButtonWrap>
             <S.MenuButton
-              onClick={() => toggleCategory(korean, "korean")}
+              onClick={() => toggleCategory(KOREAN, "korean")}
               active={buttonsState.korean}
             >
               한식
               {buttonsState.korean && (
-                <span onClick={() => removeCategory(korean, "korean")}>x</span>
+                <span onClick={() => removeCategory(KOREAN, "korean")}>x</span>
               )}
             </S.MenuButton>
             <S.MenuButton
-              onClick={() => toggleCategory(china, "china")}
+              onClick={() => toggleCategory(CHINA, "china")}
               active={buttonsState.china}
             >
               중식
               {buttonsState.china && (
-                <span onClick={() => removeCategory(china, "china")}>x</span>
+                <span onClick={() => removeCategory(CHINA, "china")}>x</span>
               )}
             </S.MenuButton>
             <S.MenuButton
-              onClick={() => toggleCategory(western, "western")}
+              onClick={() => toggleCategory(WESTERN, "western")}
               active={buttonsState.western}
             >
               양식
               {buttonsState.western && (
-                <span onClick={() => removeCategory(western, "western")}>
+                <span onClick={() => removeCategory(WESTERN, "western")}>
                   x
                 </span>
               )}
             </S.MenuButton>
             <S.MenuButton
-              onClick={() => toggleCategory(japen, "japen")}
+              onClick={() => toggleCategory(JAPEN, "japen")}
               active={buttonsState.japen}
             >
               일식
               {buttonsState.japen && (
-                <span onClick={() => removeCategory(japen, "japen")}>x</span>
+                <span onClick={() => removeCategory(JAPEN, "japen")}>x</span>
               )}
             </S.MenuButton>
           </S.ButtonWrap>

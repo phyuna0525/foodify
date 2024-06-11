@@ -29,7 +29,7 @@ const Login = () => {
         username: data.username,
         password: data.password,
       });
-      localStorage.setItem("username", data.username);
+      localStorage.setItem("name", data.username);
       const token = response.data.token;
       localStorage.setItem("accessToken", token);
       navigate("/wheel");
@@ -42,7 +42,7 @@ const Login = () => {
   return (
     <S.LoginWrap>
       <S.LoginText>
-        <S.PiCKText>FoodiFy</S.PiCKText> 가입하기
+        <S.PiCKText>FoodiFy</S.PiCKText> 로그인하기
       </S.LoginText>
       <S.ContentWrap>
         <Input
@@ -61,6 +61,8 @@ const Login = () => {
         />
         <button onClick={onClickBtn}>로그인</button>
       </S.ContentWrap>
+      아직 계정이 없으신가요?
+      <a href="/sign">회원가입</a>
     </S.LoginWrap>
   );
 };

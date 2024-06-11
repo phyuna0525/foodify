@@ -41,8 +41,6 @@ const ReciptList = ({ Name, ingredient, recipe }) => {
     };
   }, []);
 
-  console.log(data);
-
   if (!data.length) {
     return <div>Loading...</div>;
   }
