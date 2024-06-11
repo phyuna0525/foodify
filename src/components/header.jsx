@@ -11,7 +11,13 @@ const Header = () => {
   return (
     <S.HeaderContainer>
       <S.HeaderLeft>
-        <img src={Icon} alt="" />
+        <img
+          src={Icon}
+          alt=""
+          onClick={() => {
+            navigate("/wheel");
+          }}
+        />
         <Tab
           content={"음식 룰렛"}
           onClick={() => {
@@ -31,7 +37,7 @@ const Header = () => {
         }}
         style={{ cursor: "pointer" }}
       >
-        로그인
+        {name ? name : "로그인"}
       </div>
     </S.HeaderContainer>
   );

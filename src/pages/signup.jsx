@@ -31,13 +31,12 @@ const Sign = () => {
           ...data,
         }
       );
-      localStorage.setItem("username", data.username);
+      localStorage.setItem("name", data.username);
       const token = response.data.token;
       localStorage.setItem("accessToken", token);
       navigate("/wheel");
     } catch (error) {
       console.error("Signup error:", error);
-      // 에러 처리
     }
   };
 
