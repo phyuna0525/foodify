@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
-import * as S from "./style"; // Ensure this is correct and matches your project structure
+import * as S from "./style";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const ReciptList = ({ Name, ingredient, recipe }) => {
+const ReciptList = () => {
+  const nav = useNavigate();
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("전체");
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -79,7 +81,12 @@ const ReciptList = ({ Name, ingredient, recipe }) => {
         </S.Dropdown>
       </S.ReciptWrap>
       {filteredData.map((item) => (
-        <S.ReciptList key={item.ROW_NUM}>
+        <S.ReciptList
+          key={item.ROW_NUM}
+          onClick={() => {
+            nav(`${item.ROW_NUM}`);
+          }}
+        >
           <S.ReciptLeft>
             <p>{item.ROW_NUM}</p>
             <S.ReciptTitle>{item.RECIPE_NM_KO}</S.ReciptTitle>
