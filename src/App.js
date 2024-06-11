@@ -6,6 +6,7 @@ import RecipeList from "./components/RecipeList";
 import Header from "./components/header";
 import Sign from "./pages/signup";
 import Login from "./pages/login";
+import ReciptDetail from "./pages/recipt";
 
 function App() {
   return (
@@ -16,11 +17,9 @@ function App() {
         <Route path="/sign" element={<Sign />} />
         <Route path="/" element={<Test />} />
         <Route path="/Wheel" element={<Wheel />} />
-        <Route
-          path="/recipt"
-          element={<RecipeList Name="d" recipe="d" ingredient="s" />}
-        />
+        <Route path="/recipt" element={<RecipeList />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/recipt/:id" element={<ReciptDetail />} />
       </Routes>
     </Router>
   );
